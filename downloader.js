@@ -17,9 +17,10 @@ const main = async () => {
       console.log(" 📦 Downloading block #"+currentBlockNumber+"")
       var options = {
         directory: "./blocks/",
-        filename: currentBlockNumber+".json"
+        filename: "downloading_"+currentBlockNumber+".json"
       }
       const result = await get("http://jsonethblocks2021.s3-website-us-east-1.amazonaws.com/"+currentBlockNumber+".json",options);
+      await fs.renameSync("blocks/"+options.filename, "blocks/"+currentBlockNumber+".json")
     }
     currentBlockNumber++;
   }
