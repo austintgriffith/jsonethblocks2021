@@ -1,0 +1,7 @@
+{
+  "dependencies": {
+    "async-get-file": "^1.0.4",
+    "aws-sdk": "^2.1048.0",
+    "ethers": "^5.5.2"
+  }
+}
